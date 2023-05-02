@@ -40,12 +40,6 @@ data "aws_ami" "image" {
   owners           = ["355449129696"]
 }
 
-#data for the ami
-data "aws_ami" "image" {
-  most_recent      = true
-  name_regex       = "b52-ansible-dev-21Feb2023"
-  owners           = ["self"]
-}
 
 data "aws_secretsmanager_secret" "secrets" {
   name = "roboshop/secrets"
