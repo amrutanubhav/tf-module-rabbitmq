@@ -1,6 +1,6 @@
 resource "aws_security_group" "allow_rabbit" {
   
-  name        = "rabbitmq-${var.ENv}-sg"
+  name        = "rabbitmq-${var.ENV}-sg"
   description = "allow only internal traffic"
   vpc_id      = data.terraform_remote_state.vpc.outputs.VPC_ID
 
